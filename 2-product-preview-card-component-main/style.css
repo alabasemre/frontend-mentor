@@ -1,0 +1,141 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+    --margin-bottom: 24px;
+}
+
+body {
+    font-family: 'Montserrat', monospace;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    max-width: 90vw;
+    margin: 20px auto;
+    background-color: var(--cream);
+}
+
+p {
+    font-size: 14px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-position: center;
+}
+
+.product-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    max-width: 600px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: var(--white);
+}
+
+.product-desc {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.product-category {
+    font-size: 14px;
+    color: var(--dark-grayish-blue);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+
+.product-title {
+    font-family: 'Fraunces', monospace;
+    font-size: 32px;
+    line-height: 1;
+}
+
+.product-text {
+    color: var(--dark-grayish-blue);
+    text-align: start;
+    line-height: 1.6;
+}
+
+.product-price-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.product-price {
+    color: var(--dark-cyan);
+    font-family: 'Fraunces', monospace;
+    font-size: 32px;
+}
+
+.product-old-price {
+    text-decoration: line-through;
+    color: var(--dark-grayish-blue);
+    font-size: 13px;
+}
+
+.btn-add img {
+    width: 16px;
+    height: 16px;
+}
+
+.btn-add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 14px 0;
+    background-color: var(--dark-cyan);
+    border: none;
+    border-radius: 10px;
+
+    color: var(--white);
+    font-weight: 700;
+    font-family: 'Montserrat', monospace;
+    cursor: pointer;
+}
+
+.btn-add:hover {
+    background-color: var(--very-dark-blue);
+}
+
+@media screen and (max-width: 720px) {
+    main {
+        margin-top: 0;
+        max-width: 100vw;
+    }
+
+    .product-card {
+        grid-template-columns: 1fr;
+        max-width: 95%;
+    }
+
+    .product-img {
+        height: 300px;
+    }
+}
